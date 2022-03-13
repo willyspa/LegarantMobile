@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sfid: MyString
+  contractnumber: MyString
+  accountid: MyString
+  status: MyString
+  contractterm: 1
+  startdate: 2022-03-14
+
+two:
+  sfid: MyString
+  contractnumber: MyString
+  accountid: MyString
+  status: MyString
+  contractterm: 1
+  startdate: 2022-03-14
