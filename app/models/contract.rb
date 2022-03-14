@@ -1,3 +1,3 @@
 class Contract < ApplicationRecord
-    #self.table_name = 'salesforce.contract'
+    self.table_name = 'salesforce.contract'
 end

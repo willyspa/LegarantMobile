@@ -1,3 +1,3 @@
 class Account < ApplicationRecord
-    #self.table_name = 'salesforce.account'
+    self.table_name = 'salesforce.account'
 end
