@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mes contrats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sfid</th>
+      <th>Contractnumber</th>
+      <th>Accountid</th>
+      <th>Status</th>
+      <th>Contractterm</th>
+      <th>Startdate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mycontracts.each do |contract| %>
+      <tr>
+        <td><%= contract.sfid %></td>
+        <td><%= contract.contractnumber %></td>
+        <td><%= contract.accountid %></td>
+        <td><%= contract.status %></td>
+        <td><%= contract.contractterm %></td>
+        <td><%= contract.startdate %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

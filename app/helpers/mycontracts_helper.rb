@@ -1,0 +1,2 @@
+module MycontractsHelper
+end

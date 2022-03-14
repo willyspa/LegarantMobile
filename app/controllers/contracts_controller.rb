@@ -57,6 +57,10 @@ class ContractsController < ApplicationController
     end
   end
 
+  def mycontracts
+    params.require(:contract).permit(:sfid, :contractnumber, :accountid, :status, :contractterm, :startdate)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_contract
