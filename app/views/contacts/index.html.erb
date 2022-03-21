@@ -36,4 +36,40 @@
 
 <br>
 
-<%= link_to 'New Contact', new_contact_path %>
+
+=begin
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @contact.email %>
+</p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @contact.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @contact.lastname %>
+</p>
+
+<p>
+  <strong>Mobilephone:</strong>
+  <%= @contact.mobilephone %>
+</p>
+
+<p>
+  <strong>Accountid:</strong>
+  <%= @contact.accountid %>
+</p>
+
+<p>
+  <strong>Password  c:</strong>
+  <%= @contact.password__c %>
+</p>
+
+<%= link_to 'Edit', edit_contact_path(@contact) %>
+
+=end

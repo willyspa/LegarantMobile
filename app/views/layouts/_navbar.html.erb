@@ -1,0 +1,14 @@
+<div class="collapse navbar-collapse" data-nav-image="" data-color="orange">
+<ul class="navbar-nav ml-auto">
+<% if session[:contact_id] != nil %>
+<a href="/mycontracts">mes contrats</a>
+<a href="/contracts">tous les contrats</a>
+<a href="/contacts">Mes informations</a>
+<a href="/">Logout</a>
+<% else %> 
+<a href="/">Login</a>
+<% end %>  
+
+</ul>
+</div>
+
