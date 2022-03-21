@@ -3,6 +3,8 @@ class ContactsController < ApplicationController
 
   # GET /contacts or /contacts.json
   def index
+    puts('session:'+session[:contact_id].to_s)
+    redirect_to "/contacts/"+session[:contact_id].to_s
     @contacts = Contact.all
   end
 

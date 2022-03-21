@@ -1,10 +1,11 @@
 <h1>Espace de connexion</h1>
-
+<%= csrf_meta_tags %>
 <%= form_tag("/session", method: "loggin") do %>
     <%= label_tag(:email, "identifiant") %>
     <%= text_field_tag(:email) %>
     <%= label_tag(:mdp, "mot de passe") %>
     <%= text_field_tag(:mdp) %>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     </br>
     <%= submit_tag("submit") %>
 <% end %>

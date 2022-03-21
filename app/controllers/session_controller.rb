@@ -6,6 +6,8 @@ class SessionController < ApplicationController
         if (session[:contact_id] != nil)
             puts(session[:contact_id])
             puts('success session')
+            reset_session
+            puts('session reset')
         else
             puts('no session')
         end
@@ -13,6 +15,7 @@ class SessionController < ApplicationController
 
     def create
         puts("create*******************************************************************************************")
+        reset_session
         puts(params[:email])
         puts(params[:mdp])        
 
