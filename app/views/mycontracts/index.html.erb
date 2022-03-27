@@ -5,9 +5,10 @@
 <table>
   <thead>
     <tr>
-      <th>Sfid</th>
+    <!--  <th>Sfid</th> -->
       <th>Contractnumber</th>
-      <th>Accountid</th>
+      <!-- <th>Accountid</th> -->
+      <th>AccountName</th>
       <th>Status</th>
       <th>Contractterm</th>
       <th>Startdate</th>
@@ -18,9 +19,10 @@
   <tbody>
     <% @mycontracts.each do |contract| %>
       <tr>
-        <td><%= contract.sfid %></td>
+      <!--  <td><%= contract.sfid %></td> -->
         <td><%= contract.contractnumber %></td>
-        <td><%= contract.accountid %></td>
+      <!--  <td><%= contract.accountid %></td> -->
+        <td><%= contract.accountname %></td>
         <td><%= contract.status %></td>
         <td><%= contract.contractterm %></td>
         <td><%= contract.startdate %></td>
