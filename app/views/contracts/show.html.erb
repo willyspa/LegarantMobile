@@ -1,9 +1,10 @@
 <p id="notice"><%= notice %></p>
-
+<!--
 <p>
   <strong>Sfid:</strong>
   <%= @contract.sfid %>
 </p>
+-->
 
 <p>
   <strong>Contractnumber:</strong>
@@ -31,5 +32,12 @@
   <%= @contract.startdate %>
 </p>
 
-<%= link_to 'Edit', edit_contract_path(@contract) %> |
+<p>
+  <strong>description:</strong>
+  <%= @contract.description %>
+</p>
+
+<!--
+<%= link_to 'Edit', edit_contract_path(@contract) %> 
+-->
 <%= link_to 'Back', contracts_path %>

@@ -7,27 +7,30 @@
     <tr>
     <!-- <th>Sfid</th> -->
       <th>Contractnumber</th>
-    <!--  <th>Accountid</th> -->
+    <!--  <th>Accountid</th> 
       <th>Status</th>
-      <th>Contractterm</th>
-      <th>AccountName</th>
       <th>Startdate</th>
+      <th>Contractterm</th> -->
+      <th>AccountName</th>
+
       <th colspan="3"></th>
     </tr>
   </thead>
 
-  <tbody>
+  <tbody> 
     <% @contracts.each do |contract| %>
       <tr>
       <!-- <td><%= contract.sfid %></td> -->
-      <!--  <td><%= contract.contractnumber %></td> -->
-        <td><%= contract.accountid %></td>
+        <td><%= contract.contractnumber %></td> 
+      <!--  <td><%= contract.accountid %></td>
         <td><%= contract.status %></td>
         <td><%= contract.contractterm %></td>
+        <td><%= contract.startdate %></td> -->
         <td><%= contract.accountname %></td>
-        <td><%= contract.startdate %></td>
+
         
-        <!--  <td><%= link_to 'Show', contract %></td>
+        <td><%= link_to 'Show', contract %></td>
+        <!--
         <td><%= link_to 'Edit', edit_contract_path(contract) %></td>
         <td><%= link_to 'Destroy', contract, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         -->

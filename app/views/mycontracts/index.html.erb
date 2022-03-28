@@ -5,16 +5,17 @@
 <table>
   <thead>
     <tr>
-    <!--  <th>Sfid</th> -->
+<!--  <th>Sfid</th> -->
       <th>Contractnumber</th>
-      <!-- <th>Accountid</th> -->
       <th>AccountName</th>
+ <!-- <th>Accountid</th> -->
       <th>Status</th>
       <th>Contractterm</th>
       <th>Startdate</th>
+      <th>Description</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
+  </thead> 
 
   <tbody>
     <% @mycontracts.each do |contract| %>
@@ -26,6 +27,8 @@
         <td><%= contract.status %></td>
         <td><%= contract.contractterm %></td>
         <td><%= contract.startdate %></td>
+        <td><%= contract.description %></td>
+        <td><%= link_to 'Show', contract %></td>
       </tr>
     <% end %>
   </tbody>
