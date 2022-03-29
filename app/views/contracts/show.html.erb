@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+<h2>Détails</h2>
 <!--
 <p>
   <strong>Sfid:</strong>
@@ -36,8 +37,32 @@
   <strong>description:</strong>
   <%= @contract.description %>
 </p>
+<% if @produits != nil && @produits.size>0 %>
+<h3>Options</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody> 
+    <% @produits.each do |option| %>
+      <tr>
+        <td><%= option.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% end %>
+
 
 <!--
 <%= link_to 'Edit', edit_contract_path(@contract) %> 
 -->
+
 <%= link_to 'Back', contracts_path %>

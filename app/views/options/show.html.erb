@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sfid:</strong>
+  <%= @option.sfid %>
+</p>
+
+<p>
+  <strong>Contract  c:</strong>
+  <%= @option.contract__c %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @option.name %>
+</p>
+
+<%= link_to 'Edit', edit_option_path(@option) %> |
+<%= link_to 'Back', options_path %>
