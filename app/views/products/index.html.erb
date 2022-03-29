@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Products</h1>
+<h1>Nos Produits</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Nom</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,7 +14,7 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= product.name %></td>
-        <td><%= link_to 'voir détails', product %></td>
+        <td><%= link_to 'détails', product %></td>
       </tr>
     <% end %>
   </tbody>
