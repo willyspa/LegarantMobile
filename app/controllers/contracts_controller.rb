@@ -8,6 +8,8 @@ class ContractsController < ApplicationController
 
   # GET /contracts/1 or /contracts/1.json
   def show
+    c = Contract.find(params[:id])
+    @produits = Option.where(contract__c:c.sfid)
   end
 
   # GET /contracts/new
