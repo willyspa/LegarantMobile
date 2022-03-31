@@ -23,17 +23,32 @@ class ContactsController < ApplicationController
 
   # POST /contacts or /contacts.json
   def create
-    @contact = Contact.new(contact_params)
+    
+    c = Contact.new(contact_params)
 
-    respond_to do |format|
-      if @contact.save
-        format.html { redirect_to contact_url(@contact), notice: "Contact was successfully created." }
-        format.json { render :show, status: :created, location: @contact }
+    if(c.email != nil)
+      contactInDB = Contact.find_by(email:c.email)
+      if(contactInDB != nil)
+        puts('**********************************echec email deja présent**********************************')
+        redirect_to '/'
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @contact.errors, status: :unprocessable_entity }
+        puts('********************************** creation d un contact**********************************')
+        @contact = Contact.new(contact_params)
+
+        respond_to do |format|
+          if @contact.save
+            format.html { redirect_to contact_url(@contact), notice: "Compte créé avec succès." }
+            format.json { render :show, status: :created, location: @contact }
+          else
+            format.html { render :new, status: :unprocessable_entity }
+            format.json { render json: @contact.errors, status: :unprocessable_entity }
+          end
+        end
       end
     end
+
+    puts('************************************************************************************')
+
   end
 
   # PATCH/PUT /contacts/1 or /contacts/1.json
@@ -67,6 +82,6 @@ class ContactsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def contact_params
-      params.require(:contact).permit(:sfid, :email, :firstname, :lastname, :mobilephone, :accountid, :password__c)
+      params.require(:contact).permit(:sfid, :email, :firstname, :lastname, :mobilephone, :accountid, :password__c, :active__c)
     end
 end

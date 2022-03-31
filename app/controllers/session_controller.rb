@@ -22,7 +22,7 @@ class SessionController < ApplicationController
         c = Contact.find_by(email:params[:email])
 
 
-        if (c != nil && params[:mdp] != nil)
+        if (c != nil && params[:mdp] != nil && c.active__c == true)
             puts('not nil')
             puts(c.password__c+params[:mdp])
 
